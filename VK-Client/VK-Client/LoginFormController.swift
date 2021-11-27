@@ -9,22 +9,54 @@ import UIKit
 
 class LoginFormController: UIViewController {
     
-    override func loadView() {
-        super.loadView()
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor.white.cgColor, UIColor.systemBlue.cgColor]
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
-        
-    }
-
+    @IBOutlet weak var loginTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var contentScrollView: UIScrollView!
+    
+    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInButton.layer.cornerRadius = signInButton.frame.height / 2
+        signInButton.layer.masksToBounds = true
         
-        // Do any additional setup after loading the view.
+        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        contentScrollView?.addGestureRecognizer(hideKeyboardGesture)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWasShown(notification: Notification) {
+    let info = notification.userInfo! as NSDictionary
+    let kbSize = (info.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
+    let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: kbSize.height, right: 0.0)
+    self.contentScrollView?.contentInset = contentInsets
+        contentScrollView?.scrollIndicatorInsets = contentInsets }
 
-
+    @objc func keyboardWillBeHidden(notification: Notification) {
+        let contentInsets = UIEdgeInsets.zero
+        contentScrollView?.contentInset = contentInsets
+    }
+    
+    @objc func hideKeyboard() { self.contentScrollView?.endEditing(true) }
+    
+    @IBAction func signInButton(_ sender: UIButton) {
+        let login = loginTF.text!
+        let password = passwordTF.text!
+        if login == "admin" && password == "1234" { print("Success")
+        } else {
+        print("Failure")
+        }
+    }
 }
 
