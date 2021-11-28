@@ -37,12 +37,12 @@ class LoginFormController: UIViewController {
     }
     
     @objc func keyboardWasShown(notification: Notification) {
-    let info = notification.userInfo! as NSDictionary
-    let kbSize = (info.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
-    let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: kbSize.height, right: 0.0)
-    self.contentScrollView?.contentInset = contentInsets
+        let info = notification.userInfo! as NSDictionary
+        let kbSize = (info.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: kbSize.height, right: 0.0)
+        self.contentScrollView?.contentInset = contentInsets
         contentScrollView?.scrollIndicatorInsets = contentInsets }
-
+    
     @objc func keyboardWillBeHidden(notification: Notification) {
         let contentInsets = UIEdgeInsets.zero
         contentScrollView?.contentInset = contentInsets
@@ -55,8 +55,35 @@ class LoginFormController: UIViewController {
         let password = passwordTF.text!
         if login == "admin" && password == "1234" { print("Success")
         } else {
-        print("Failure")
+            print("Failure")
         }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let checkResult = checkUserData()
+        
+        if !checkResult {
+            showLoginError()
+        }
+        return checkResult
+    }
+    
+    func checkUserData() -> Bool {
+        guard let login = loginTF.text,
+              let password = passwordTF.text else { return false }
+        
+        if login == "admin" && password == "1234" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func showLoginError() {
+        let alert = UIAlertController(title: "Error", message: "Incorrect user data entered", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
 
