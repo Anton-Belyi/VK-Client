@@ -50,14 +50,7 @@ class LoginFormController: UIViewController {
     
     @objc func hideKeyboard() { self.contentScrollView?.endEditing(true) }
     
-    @IBAction func signInButton(_ sender: UIButton) {
-        let login = loginTF.text!
-        let password = passwordTF.text!
-        if login == "admin" && password == "1234" { print("Success")
-        } else {
-            print("Failure")
-        }
-    }
+    @IBAction func signInButton(_ sender: UIButton) { }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let checkResult = checkUserData()
