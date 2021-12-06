@@ -5,4 +5,9 @@
 //  Created by Антон Белый on 04.12.2021.
 //
 
-import Foundation
+import UIKit
+
+class FriendCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var friendPhoto: UIImageView!
+}
