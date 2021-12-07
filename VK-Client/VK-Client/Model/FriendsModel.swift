@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FriendsModel {
+struct FriendsModel: Equatable {
     let userName: String
     let userPhoto: String
 }
