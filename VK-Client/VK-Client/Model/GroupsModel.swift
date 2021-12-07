@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GroupsModel {
+struct GroupsModel: Equatable {
     let groupName: String
     let groupImage: String
 }

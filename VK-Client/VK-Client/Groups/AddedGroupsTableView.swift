@@ -16,7 +16,6 @@ class AddedGroupsTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "addedGroupsCell", for: indexPath) as! AddedGroupsTableViewCell
-
         cell.addedGroupsName.text = myGroups[indexPath.row].groupName
         cell.addedGroupsImage.image = UIImage(named: myGroups[indexPath.row].groupImage)
         return cell
@@ -32,9 +31,9 @@ class AddedGroupsTableView: UITableViewController {
         if segue.identifier == "addGroup" {
             guard let allGroupsController = segue.source as? NewGroupTableView else { return }
             if let indexPath = allGroupsController.tableView.indexPathForSelectedRow {
-                let group = allGroupsController.newGroup[indexPath.row]
-                if !myGroups.contains(group) {
-                    myGroups.append(group)
+                let groups = allGroupsController.newGroup[indexPath.row]
+                if !myGroups.contains(where: {$0 == groups}) {
+                    myGroups.append(groups)
                     tableView.reloadData()
                 }
             }
