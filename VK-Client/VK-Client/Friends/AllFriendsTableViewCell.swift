@@ -17,6 +17,6 @@ class AllFriendsTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         setupShadow(view: shadowView, image: allFriendsPhoto)
-        
+
     }
 }

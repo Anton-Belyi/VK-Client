@@ -10,4 +10,13 @@ import UIKit
 class FriendCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var friendPhoto: UIImageView!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+       
+
+    
+    }
+    
+
 }

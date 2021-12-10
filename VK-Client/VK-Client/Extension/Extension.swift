@@ -14,7 +14,7 @@ extension UITableViewCell {
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.8
         view.layer.shadowOffset = CGSize.zero
-        view.layer.shadowRadius = 10
+        view.layer.shadowRadius = 5
         view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: image.frame.height / 2).cgPath
         
         image.layer.cornerRadius = image.frame.height / 2
