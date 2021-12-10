@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A12807B275FB383002CFFC5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12807A275FB383002CFFC5 /* Extension.swift */; };
 		3A59F857275CB64B0016EFFF /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F856275CB64B0016EFFF /* FriendsModel.swift */; };
 		3A59F859275CB65A0016EFFF /* GroupsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F858275CB65A0016EFFF /* GroupsModel.swift */; };
 		3AE2FD1D2749487C006AF90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2FD1C2749487C006AF90C /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A12807A275FB383002CFFC5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3A59F856275CB64B0016EFFF /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		3A59F858275CB65A0016EFFF /* GroupsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsModel.swift; sourceTree = "<group>"; };
 		3AE2FD192749487C006AF90C /* VK-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A12807C275FB426002CFFC5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3A12807A275FB383002CFFC5 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		3A59F855275CB6290016EFFF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		3AE2FD1B2749487C006AF90C /* VK-Client */ = {
 			isa = PBXGroup;
 			children = (
+				3A12807C275FB426002CFFC5 /* Extension */,
 				3A59F855275CB6290016EFFF /* Model */,
 				3AEE4613275BD113009D74C0 /* Friends */,
 				3AEE4614275BD11D009D74C0 /* Groups */,
@@ -201,6 +212,7 @@
 				3AEE4622275BD450009D74C0 /* AllFriendsTableViewCell.swift in Sources */,
 				3AEE461A275BD189009D74C0 /* NewGroupTableView.swift in Sources */,
 				3AEE461E275BD3B5009D74C0 /* AddedGroupsTableViewCell.swift in Sources */,
+				3A12807B275FB383002CFFC5 /* Extension.swift in Sources */,
 				3A59F857275CB64B0016EFFF /* FriendsModel.swift in Sources */,
 				3AEE4620275BD3C5009D74C0 /* NewGroupTableViewCell.swift in Sources */,
 				3A59F859275CB65A0016EFFF /* GroupsModel.swift in Sources */,

@@ -32,6 +32,7 @@ class AddedGroupsTableView: UITableViewController {
             guard let allGroupsController = segue.source as? NewGroupTableView else { return }
             if let indexPath = allGroupsController.tableView.indexPathForSelectedRow {
                 let groups = allGroupsController.newGroup[indexPath.row]
+                // Check Dublicate
                 if !myGroups.contains(where: {$0 == groups}) {
                     myGroups.append(groups)
                     tableView.reloadData()
