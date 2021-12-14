@@ -10,6 +10,7 @@
 		3A12807B275FB383002CFFC5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12807A275FB383002CFFC5 /* Extension.swift */; };
 		3A59F857275CB64B0016EFFF /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F856275CB64B0016EFFF /* FriendsModel.swift */; };
 		3A59F859275CB65A0016EFFF /* GroupsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F858275CB65A0016EFFF /* GroupsModel.swift */; };
+		3A6D3B2A2764B54800247499 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D3B292764B54800247499 /* LikeButton.swift */; };
 		3AE2FD1D2749487C006AF90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2FD1C2749487C006AF90C /* AppDelegate.swift */; };
 		3AE2FD1F2749487C006AF90C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2FD1E2749487C006AF90C /* SceneDelegate.swift */; };
 		3AE2FD212749487C006AF90C /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2FD202749487C006AF90C /* LoginFormController.swift */; };
@@ -30,6 +31,7 @@
 		3A12807A275FB383002CFFC5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3A59F856275CB64B0016EFFF /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		3A59F858275CB65A0016EFFF /* GroupsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsModel.swift; sourceTree = "<group>"; };
+		3A6D3B292764B54800247499 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		3AE2FD192749487C006AF90C /* VK-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE2FD1C2749487C006AF90C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE2FD1E2749487C006AF90C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				3A12807A275FB383002CFFC5 /* Extension.swift */,
+				3A6D3B292764B54800247499 /* LikeButton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				3A59F857275CB64B0016EFFF /* FriendsModel.swift in Sources */,
 				3AEE4620275BD3C5009D74C0 /* NewGroupTableViewCell.swift in Sources */,
 				3A59F859275CB65A0016EFFF /* GroupsModel.swift in Sources */,
+				3A6D3B2A2764B54800247499 /* LikeButton.swift in Sources */,
 				3AEE4616275BD14F009D74C0 /* AllFriendsTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
