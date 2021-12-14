@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -364,17 +365,32 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2l5-rn-VFd">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eI-kB-A01" customClass="LikeButton" customModule="VK_Client" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="168" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="Sq9-vB-YO4"/>
+                                                <constraint firstAttribute="height" constant="24" id="oQ6-DK-kqv"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain">
+                                                <imageReference key="image" image="unlike" symbolScale="large"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                            </buttonConfiguration>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="2l5-rn-VFd" firstAttribute="centerX" secondItem="H3a-yd-j2q" secondAttribute="centerX" id="84l-kN-2eh"/>
                                         <constraint firstItem="2l5-rn-VFd" firstAttribute="height" secondItem="H3a-yd-j2q" secondAttribute="height" id="JjJ-Te-vJQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="7eI-kB-A01" secondAttribute="bottom" constant="8" id="NvV-ry-2UY"/>
                                         <constraint firstItem="2l5-rn-VFd" firstAttribute="width" secondItem="H3a-yd-j2q" secondAttribute="width" id="OsU-Da-Mg7"/>
+                                        <constraint firstItem="7eI-kB-A01" firstAttribute="leading" secondItem="H3a-yd-j2q" secondAttribute="leading" constant="8" id="p45-pN-w2d"/>
                                         <constraint firstItem="2l5-rn-VFd" firstAttribute="centerY" secondItem="H3a-yd-j2q" secondAttribute="centerY" id="rr6-fZ-D9j"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
                                     <outlet property="friendPhoto" destination="2l5-rn-VFd" id="Sr6-rM-uxq"/>
+                                    <outlet property="likeButton" destination="7eI-kB-A01" id="j1w-vU-A3K"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -470,6 +486,7 @@
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
+        <image name="unlike" width="512" height="512"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
