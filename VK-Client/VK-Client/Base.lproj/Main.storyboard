@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -368,29 +367,40 @@
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eI-kB-A01" customClass="LikeButton" customModule="VK_Client" customModuleProvider="target">
                                             <rect key="frame" x="8" y="168" width="24" height="24"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="24" id="Sq9-vB-YO4"/>
-                                                <constraint firstAttribute="height" constant="24" id="oQ6-DK-kqv"/>
+                                                <constraint firstAttribute="width" constant="24" id="G1o-32-C4d"/>
+                                                <constraint firstAttribute="height" constant="24" id="TY8-ZY-kG5"/>
                                             </constraints>
+                                            <color key="tintColor" systemColor="systemRedColor"/>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain">
-                                                <imageReference key="image" image="unlike" symbolScale="large"/>
-                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
-                                            </buttonConfiguration>
+                                            <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDq-TO-EjQ">
+                                            <rect key="frame" x="37" y="169" width="40" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="9so-9l-aQq"/>
+                                                <constraint firstAttribute="height" constant="21" id="Jx8-7Y-64j"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                            <color key="textColor" systemColor="systemRedColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="2l5-rn-VFd" firstAttribute="centerX" secondItem="H3a-yd-j2q" secondAttribute="centerX" id="84l-kN-2eh"/>
+                                        <constraint firstAttribute="bottom" secondItem="7eI-kB-A01" secondAttribute="bottom" constant="8" id="DaQ-vJ-Ivf"/>
+                                        <constraint firstItem="CDq-TO-EjQ" firstAttribute="leading" secondItem="7eI-kB-A01" secondAttribute="trailing" constant="5" id="G4c-2S-Jln"/>
                                         <constraint firstItem="2l5-rn-VFd" firstAttribute="height" secondItem="H3a-yd-j2q" secondAttribute="height" id="JjJ-Te-vJQ"/>
-                                        <constraint firstAttribute="bottom" secondItem="7eI-kB-A01" secondAttribute="bottom" constant="8" id="NvV-ry-2UY"/>
                                         <constraint firstItem="2l5-rn-VFd" firstAttribute="width" secondItem="H3a-yd-j2q" secondAttribute="width" id="OsU-Da-Mg7"/>
-                                        <constraint firstItem="7eI-kB-A01" firstAttribute="leading" secondItem="H3a-yd-j2q" secondAttribute="leading" constant="8" id="p45-pN-w2d"/>
+                                        <constraint firstAttribute="bottom" secondItem="CDq-TO-EjQ" secondAttribute="bottom" constant="10" id="p44-cO-KLR"/>
                                         <constraint firstItem="2l5-rn-VFd" firstAttribute="centerY" secondItem="H3a-yd-j2q" secondAttribute="centerY" id="rr6-fZ-D9j"/>
+                                        <constraint firstItem="7eI-kB-A01" firstAttribute="leading" secondItem="H3a-yd-j2q" secondAttribute="leading" constant="8" id="tgz-Ku-Sgl"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
                                     <outlet property="friendPhoto" destination="2l5-rn-VFd" id="Sr6-rM-uxq"/>
-                                    <outlet property="likeButton" destination="7eI-kB-A01" id="j1w-vU-A3K"/>
+                                    <outlet property="likeButton" destination="7eI-kB-A01" id="6Jz-Gu-Fwt"/>
+                                    <outlet property="likeCount" destination="CDq-TO-EjQ" id="jg6-eY-fFO"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -483,15 +493,18 @@
     </scenes>
     <resources>
         <image name="VK.com-logo" width="2048" height="2048"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
-        <image name="unlike" width="512" height="512"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -10,8 +10,8 @@ import UIKit
 class LikeButton: UIButton {
     private var isLiked = false
     
-    private let unlikedImage = UIImage(named: "heat")
-    private let likedImage = UIImage(named: "heart.fill")
+    private let unlikedImage = UIImage(systemName: "heart")
+    private let likedImage = UIImage(systemName: "heart.fill")
     
     private let unlikedScale: CGFloat = 0.7
     private let likedScale: CGFloat = 1.3
