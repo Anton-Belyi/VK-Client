@@ -71,5 +71,4 @@ class AllFriendsTableView: UITableViewController {
             }
         }
     }
-    
 }

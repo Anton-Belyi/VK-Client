@@ -15,8 +15,6 @@ class AllFriendsTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         setupShadow(view: shadowView, image: allFriendsPhoto)
-
     }
 }
