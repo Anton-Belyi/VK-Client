@@ -102,6 +102,7 @@ extension AllFriendsTableView: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.text = nil
+        filteredSections = sections
         tableView.reloadData()
         searchBar.resignFirstResponder()
     }
