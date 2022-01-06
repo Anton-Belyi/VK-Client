@@ -34,8 +34,7 @@ class AllFriendsTableView: UITableViewController {
         searchBar.delegate = self
         
         tableView.sectionHeaderTopPadding = 0
-        UITableViewHeaderFooterView.appearance().tintColor = UIColor(cgColor: CGColor(red: 214/255, green: 214/255, blue: 214/255, alpha: 0.2))
-        // Section Settings
+        
         let groupedDictionary = Dictionary(grouping: allFriends, by: {String($0.userName.prefix(1))})
         
         for (key, value) in groupedDictionary.sorted(by: {$0.key < $1.key}) {
@@ -61,8 +60,17 @@ class AllFriendsTableView: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return filteredSections[section].letter
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView()
+        header.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
+        
+        let letter: UILabel = UILabel(frame: CGRect(x: 30, y: 5, width: 20, height: 20))
+        letter.text = filteredSections[section].letter
+        letter.textColor = UIColor.black.withAlphaComponent(0.5)
+        letter.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.bold)
+        header.addSubview(letter)
+        
+        return header
     }
     
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
