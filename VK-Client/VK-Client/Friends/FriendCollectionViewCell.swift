@@ -11,19 +11,22 @@ class FriendCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var friendPhoto: UIImageView!
 
-    var count: Int = 0
-    var likeButtonPress = false
-    
-    
+    let likeButtonForm = LikeButtonForm()
+                                     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let likeButton = LikeViewFormButton(positionX: 10, positionY: contentView.frame.height - 35.0)
+        contentView.addSubview(likeButtonForm)
+        likeButtonForm.frame = CGRect(x: 10, y: contentView.frame.height - 35, width: 58, height: 25)
+        likeButtonForm.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
+        likeButtonForm.layer.cornerRadius = likeButtonForm.frame.height / 2
+        likeButtonForm.clipsToBounds = true
         
-        contentView.addSubview(likeButton)
-        likeButton.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
-        likeButton.layer.cornerRadius = likeButton.frame.height / 2
-        likeButton.clipsToBounds = true
-        
+        likeButtonForm.likeButton.addTarget(self, action: #selector(handleHeartButtonTap(_:)), for: .touchUpInside)
     }
+    
+    @objc private func handleHeartButtonTap(_ sender: UITapGestureRecognizer? = nil) {
+        likeButtonForm.flipLikedState()
+    }
+    
 }

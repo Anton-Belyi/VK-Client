@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3A12807B275FB383002CFFC5 /* ExtensionShadowAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12807A275FB383002CFFC5 /* ExtensionShadowAvatar.swift */; };
-		3A1D7931278763A0001506BA /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1D7930278763A0001506BA /* HeartButton.swift */; };
 		3A59F857275CB64B0016EFFF /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F856275CB64B0016EFFF /* FriendsModel.swift */; };
 		3A59F859275CB65A0016EFFF /* GroupsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F858275CB65A0016EFFF /* GroupsModel.swift */; };
-		3A6D3B2A2764B54800247499 /* LikeViewFormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D3B292764B54800247499 /* LikeViewFormButton.swift */; };
+		3A6D3B2A2764B54800247499 /* LikeButtonForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D3B292764B54800247499 /* LikeButtonForm.swift */; };
 		3AE2FD1D2749487C006AF90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2FD1C2749487C006AF90C /* AppDelegate.swift */; };
 		3AE2FD1F2749487C006AF90C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2FD1E2749487C006AF90C /* SceneDelegate.swift */; };
 		3AE2FD212749487C006AF90C /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2FD202749487C006AF90C /* LoginFormController.swift */; };
@@ -30,10 +29,9 @@
 
 /* Begin PBXFileReference section */
 		3A12807A275FB383002CFFC5 /* ExtensionShadowAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionShadowAvatar.swift; sourceTree = "<group>"; };
-		3A1D7930278763A0001506BA /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		3A59F856275CB64B0016EFFF /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		3A59F858275CB65A0016EFFF /* GroupsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsModel.swift; sourceTree = "<group>"; };
-		3A6D3B292764B54800247499 /* LikeViewFormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewFormButton.swift; sourceTree = "<group>"; };
+		3A6D3B292764B54800247499 /* LikeButtonForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonForm.swift; sourceTree = "<group>"; };
 		3AE2FD192749487C006AF90C /* VK-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE2FD1C2749487C006AF90C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE2FD1E2749487C006AF90C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,19 +64,10 @@
 		3A12807C275FB426002CFFC5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				3A1D7932278763A7001506BA /* LikeButton */,
+				3A6D3B292764B54800247499 /* LikeButtonForm.swift */,
 				3A12807A275FB383002CFFC5 /* ExtensionShadowAvatar.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		3A1D7932278763A7001506BA /* LikeButton */ = {
-			isa = PBXGroup;
-			children = (
-				3A6D3B292764B54800247499 /* LikeViewFormButton.swift */,
-				3A1D7930278763A0001506BA /* HeartButton.swift */,
-			);
-			path = LikeButton;
 			sourceTree = "<group>";
 		};
 		3A59F855275CB6290016EFFF /* Model */ = {
@@ -229,9 +218,8 @@
 				3A12807B275FB383002CFFC5 /* ExtensionShadowAvatar.swift in Sources */,
 				3A59F857275CB64B0016EFFF /* FriendsModel.swift in Sources */,
 				3AEE4620275BD3C5009D74C0 /* NewGroupTableViewCell.swift in Sources */,
-				3A1D7931278763A0001506BA /* HeartButton.swift in Sources */,
 				3A59F859275CB65A0016EFFF /* GroupsModel.swift in Sources */,
-				3A6D3B2A2764B54800247499 /* LikeViewFormButton.swift in Sources */,
+				3A6D3B2A2764B54800247499 /* LikeButtonForm.swift in Sources */,
 				3AEE4616275BD14F009D74C0 /* AllFriendsTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
